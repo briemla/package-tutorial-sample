@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: True
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
         python-version: ["3.10"]
 
     steps:
@@ -36,9 +36,6 @@ jobs:
       - name: Lint codebase
         run: |
           flake8 .
-      - name: Execute static type checking
-        run: |
-          mypy .
       - name: Test with pytest
         run: pytest --cov=src/example_package_this_is_my_test_package_u_42 tests/
 

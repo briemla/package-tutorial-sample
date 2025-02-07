@@ -14,9 +14,6 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         python-version: ["3.10"]
-    environment:
-      name: testpypi
-      url: https://test.pypi.org/legacy/
     permissions:
       actions: read
       contents: read
@@ -44,4 +41,5 @@ jobs:
       - name: Publish package distributions to TestPyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
+          repository-url: https://test.pypi.org/legacy/
           verbose: true

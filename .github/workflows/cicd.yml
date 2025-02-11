@@ -43,3 +43,5 @@ jobs:
           .
       - name: Publish Python Package
         uses: platomo/publish-pypi-action@v1.0.1
+        with:
+          out_dir: 'dist/'

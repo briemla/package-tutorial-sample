@@ -22,7 +22,6 @@ jobs:
       contents: read
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
-      - working-directory: ./
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
@@ -44,3 +43,4 @@ jobs:
           .
       - name: Publish Python Package
         uses: platomo/publish-pypi-action@v1.0.1
+        working-directory: ./temp

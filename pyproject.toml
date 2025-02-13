@@ -1,3 +1,7 @@
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
 [project]
 name = "example_package_this_is_my_test_package_u_42"
 dynamic = ["dependencies", "version"]

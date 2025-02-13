@@ -5,6 +5,8 @@ name: Run CI/CD
 
 on: push
 
+permissions: read-all
+
 env:
   PYPI_REPO_URL: https://test.pypi.org/legacy/
   out_dir: "dist/"
@@ -19,8 +21,6 @@ jobs:
       name: testpypi
       url: https://test.pypi.org/p/example_package_this_is_my_test_package_u_42
     permissions:
-      actions: read
-      contents: read
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
       - name: Checkout code

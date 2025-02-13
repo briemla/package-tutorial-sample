@@ -22,3 +22,9 @@ files = ["requirements.txt"]
 
 [tool.hatch.version]
 path = "src/example_package_this_is_my_test_package_u_42/version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["example_package_this_is_my_test_package_u_42"]
+
+[tool.hatch.build]
+directory = "dist"

@@ -1,7 +1,7 @@
 [project]
 name = "example_package_this_is_my_test_package_u_42"
 version = "0.0a20250212123457"
-dynamic = ["dependencies"]
+dynamic = ["dependencies", "version"]
 authors = [
   { name="Lars Briem", email="lars.briem@platomo.com" },
 ]

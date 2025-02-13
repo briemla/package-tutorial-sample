@@ -29,7 +29,7 @@ jobs:
         uses: platomo/update-version-py-action@v1.0.1
         with:
           version: nightly
-          file-path: "example_package_this_is_my_test_package_u_42"
+          file-path: "src/example_package_this_is_my_test_package_u_42/"
       - name: Install pypa/build
         shell: bash
         run: |

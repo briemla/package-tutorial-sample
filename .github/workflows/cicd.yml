@@ -15,6 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: True
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/example_package_this_is_my_test_package_u_42
     permissions:
       actions: read
       contents: read

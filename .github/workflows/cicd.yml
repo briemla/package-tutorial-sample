@@ -38,9 +38,6 @@ jobs:
         shell: bash
         run: |
           python3 -m pip install build --user
-      - name: Show version file
-        shell: bash
-        run: cat "src/example_package_this_is_my_test_package_u_42/version.py"
       - name: Build a binary wheel and a source tarball
         shell: bash
         run: python -m build --sdist --wheel --outdir ${{ env.out_dir }}

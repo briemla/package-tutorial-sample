@@ -11,7 +11,7 @@ env:
 jobs:
   build-n-publish:
     name: Build and upload release to PyPI
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: True
     permissions:
